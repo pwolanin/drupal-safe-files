@@ -1,0 +1,13 @@
+.reveal .text-bg {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 1em;
+  padding-bottom: 3em;
+}
+
+.reveal .photo-credit {
+  position: absolute;
+  font-size: small;
+  bottom: 1em;
+  color: #aaa;
+}
