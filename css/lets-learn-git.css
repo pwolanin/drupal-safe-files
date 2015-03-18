@@ -2,12 +2,16 @@
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   padding: 1em;
-  padding-bottom: 3em;
+  padding-bottom: 2em;
 }
 
 .reveal .photo-credit {
   position: absolute;
-  font-size: small;
+  font-size: x-small;
   bottom: 1em;
-  color: #aaa;
+  color: #888;
+}
+
+.reveal .photo-credit a {
+  color: #ccc;
 }
