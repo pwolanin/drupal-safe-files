@@ -19,3 +19,11 @@
 dt {
   color: #00C5CD;
 }
+
+.reveal .slides section .fragment.highlight-current-teal {
+  opacity: 1;
+  visibility: visible;
+}
+.reveal .slides section .fragment.highlight-current-teal.current-fragment {
+  color: #00C5CD;
+}
