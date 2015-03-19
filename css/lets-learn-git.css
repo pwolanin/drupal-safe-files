@@ -27,3 +27,7 @@ dt {
 .reveal .slides section .fragment.highlight-current-teal.current-fragment {
   color: #00C5CD;
 }
+
+.reveal blockquote {
+  background: rgba(255, 255, 255, 0.25);
+}
