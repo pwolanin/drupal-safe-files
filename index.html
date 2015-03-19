@@ -695,12 +695,56 @@ git push -u origin master
         </section>
 
         <section data-background="images/backgrounds/broken-glass-by-holger.jpg">
-          <div class="text-bg">
-            <h1>Conflict</h1>
-            <p class="photo-credit">
-              Photo by <a href="https://flic.kr/p/beuYJp">Holger</a>, Flickr.com
-            </p>
-          </div>
+          <section>
+	    <div class="text-bg">
+	      <h1>Conflict</h1>
+	      <p>File has been modified in the same place:</p>
+	      <ol>
+		<li><i class="fa fa-code-fork"></i> stops activity (merge, rebase)</li>
+		<li><i class="fa fa-code-fork"></i> lists files with conflicts</li>
+		<li><i class="fa fa-user"></i> resolve conflicts</li>
+		<li><i class="fa fa-user"></i> add (stage) files to continue activity</li>
+	      </ol>
+	      <p class="photo-credit">
+		Photo by <a href="https://flic.kr/p/beuYJp">Holger</a>, Flickr.com
+	      </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Conflict markers</h2>
+              <pre><code data-trim contenteditable>
+Question: How many planets are there in the solar system?
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Answer: eight.
+=======
+Answer: nine.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-a
+              </code></pre>
+              <p>Replace text between markers with your resolution and delete markers.</p>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/beuYJp">Holger</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Resolve</h2>
+              <pre><code data-trim contenteditable>
+Question: How many planets are there in the solar system?
+Answer: eight.
+              </code></pre>
+              <p>
+                <code>git add &lt;file&gt;</code>
+                to mark conflict resolved and continue merge or rebase
+              </p>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/beuYJp">Holger</a>, Flickr.com
+              </p>
+            </div>
+          </section>
         </section>
 
         <section data-background="images/backgrounds/fluid-paint-pouring-by-mark-chadwick.jpg">
