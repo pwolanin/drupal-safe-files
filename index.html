@@ -332,12 +332,160 @@ git init
         </section>
 
         <section data-background="images/backgrounds/kittens-by-christina-robinson.jpg">
-          <div class="text-bg">
-            <h1>Three sidekicks</h1>
-            <p class="photo-credit">
-              Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
-            </p>
-          </div>
+          <section>
+            <div class="text-bg">
+              <h1>Three sidekicks</h1>
+               <blockquote>"Where am I?"</blockquote>
+               <blockquote>"What is going on?"</blockquote>
+               <blockquote>"What did I just do?"</blockquote>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Status</h2>
+              <blockquote>Where am I?</blockquote>
+              <pre><code data-trim>
+git status
+  On branch master
+
+  Initial commit
+
+  Untracked files:
+    (use "git add &lt;file&gt;..." to include in what will be committed)
+
+    README.md
+
+  nothing added to commit but untracked files present (use "git add" to track)
+              </code></pre>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Status</h2>
+              <pre><code data-trim contenteditable>
+git add README.md
+git status
+  On branch master
+
+  Initial commit
+
+  Changes to be committed:
+    (use "git rm --cached &lt;file&gt;..." to unstage)
+
+    new file:   README.md
+              </code></pre>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2><i class="fa fa-file-text-o"></i> README.md</h2>
+              <pre><code data-trim contenteditable>
+# Packing List
+
+Packing list for trips.
+
+* laptop
+* skirt with pockets
+* toothbrush
+              </code></pre>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Status</h2>
+              <pre><code data-trim contenteditable>
+On branch master
+Initial commit
+
+Changes to be committed:
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+  modified:   README.md
+
+Changes not staged for commit:
+  (use "git add &lt;file&gt;.." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+  modified:   README.md
+              </code></pre>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Diff</h2>
+              <blockquote>What's going on?</blockquote>
+              <pre><code data-trim contenteditable>
+diff --git a/README.md b/README.md
+index daa8d60..da0a4b2 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,7 @@
+ # Packing List
+
+ Packing list for trips.
++
++* laptop
++* skirt with pockets
++* toothbrush
+              </code></pre>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Let's make history</h2>
+              <pre><code data-trim contenteditable>
+git commit -m "Initial commit."
+  [master (root-commit) 1c50eb4] Initial commit.
+  1 file changed, 3 insertions(+)
+  create mode 100644 README.md
+              </code></pre>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>log</h2>
+              <blockquote>What just happened?</blockquote>
+              <pre><code data-trim contenteditable>
+git log
+  commit b9fd7596e44051a99b683a19982c592fdcbca5a5
+  Author: Alina Mackenzie &lt;hello@alim.ac&gt;
+  Date:   Wed Mar 8 12:10:25 2015 -0500
+
+    Initial commit.
+              </code></pre>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
+              </p>
+            </div>
+          </section>
         </section>
 
         <section data-background="images/backgrounds/highland-theatre-by-missmass.jpg">
