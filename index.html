@@ -654,17 +654,85 @@ git push -u origin master
                 Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
               </p>
             </div>
-          </section>
 
+          </section>
         </section>
 
         <section data-background="images/backgrounds/no-2-pencils-by-melissa-hincha-ownby.jpg">
-          <div class="text-bg">
-            <h1>Undo</h1>
-            <p class="photo-credit">
-              Photo by <a href="https://flic.kr/p/biy1tt">Melissa Hincha-Ownby</a>, Flickr.com
-            </p>
-          </div>
+          <section>
+	    <div class="text-bg">
+	      <h1>Undo</h1>
+	      <h2>Not committed yet?</h2>
+	      <dl>
+		<dt>unstage a file</dt>
+		<dd>
+		  <code>git reset HEAD README.md</code><br>
+		  <code>git reset -p</code>
+		</dd>
+		<dt>undo all changes to a file</dt>
+		<dd><code>git checkout -- README.md</code></dd>
+	      </dl>
+	      <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/biy1tt">Melissa Hincha-Ownby</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Committed?</h2>
+              <dl>
+                <dt>update last commit</dt>
+                <dd>
+                  stage or unstage files as you normally would<br>
+                  <code>git commit --amend</code>
+                </dd>
+                <dt>undo last commit</dt>
+                <dd>
+                  <code>git reset --soft HEAD~1</code><br>
+                  <code>git reset HEAD~1</code>
+                </dd>
+              </dl>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/biy1tt">Melissa Hincha-Ownby</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>More than one commit?</h2>
+              <dl>
+                <dt>undo last 3 commits</dt>
+                <dd>
+                  <code>git reset --soft HEAD~3</code><br>
+                  <code>git reset HEAD~3</code>
+                </dd>
+                <dt>undo a specific commit</dt>
+                <dd>
+                  <code>git revert 617ff153</code><br>
+                </dd>
+              </dl>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/biy1tt">Melissa Hincha-Ownby</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Pushed?</h2>
+              <p class="fragment highlight-red">Don't do it.</p>
+              <p class="fragment">But if you have to...</p>
+              <p class="fragment">... and you are the <strong>only</strong> contributor</p>
+              <code class="fragment">
+                git push --force &lt;remote&gt; &lt;branch&gt;
+              </code>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/biy1tt">Melissa Hincha-Ownby</a>, Flickr.com
+              </p>
+            </div>
+          </section>
         </section>
 
         <section data-background="images/backgrounds/red-branch-by-lamoix.jpg">
