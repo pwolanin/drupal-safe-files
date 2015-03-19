@@ -795,12 +795,52 @@ git push -u origin master
         </section>
 
         <section data-background="images/backgrounds/joy-by-nige-harris.jpg">
-          <div class="text-bg">
-            <h1>Merge</h1>
-            <p class="photo-credit">
-              Photo by <a href="https://flic.kr/p/a7PPTr">Nige Harris</a>, Flickr.com
-            </p>
-          </div>
+          <section>
+	    <div class="text-bg">
+	      <h1>Merge</h1>
+              <p>marge testing into master</p>
+              <pre><code data-trim contenteditable>
+git checkout master
+git merge testing
+              </code></pre>
+	      <p class="photo-credit">
+		Photo by <a href="https://flic.kr/p/a7PPTr">Nige Harris</a>, Flickr.com
+	      </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Fast-forward merge</h2>
+              <p>Replay commits of one branch onto another</p>
+              <img src="images/checkout-master.png" alt="Diagram showing a branch that can be merged by fast-forward.">
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/a7PPTr">Nige Harris</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Recursive merge</h2>
+              <p>Branches have diverged</p>
+              <img src="images/basic-merging-1.png" alt="Diagram showing diverged branches.">
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/a7PPTr">Nige Harris</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Merge commit</h2>
+              <p>Tie two branch endpoints</p>
+              <img src="images/basic-merging-2.png" alt="Diagram showing merge commit.">
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/a7PPTr">Nige Harris</a>, Flickr.com
+              </p>
+            </div>
+          </section>
         </section>
 
         <section data-background="images/backgrounds/stacks-of-chairs-by-leo-reynolds.jpg">
