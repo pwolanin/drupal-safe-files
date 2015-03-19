@@ -489,12 +489,116 @@ git log
         </section>
 
         <section data-background="images/backgrounds/newly-cut-by-kathleen-tyler-conklin.jpg">
-          <div class="text-bg">
-            <h1>Commit</h1>
-            <p class="photo-credit">
-              Photo by <a href="https://flic.kr/p/4Lv5As">Kathleen Typer-Conklin</a>, Flickr.com
-            </p>
-          </div>
+          <section>
+            <div class="text-bg">
+              <h1>Commit</h1>
+              <blockquote>
+                "A set of related and reversible changes that function together as a unit of work."
+              </blockquote>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/4Lv5As">Kathleen Typer-Conklin</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Interactive staging</h2>
+              <dl>
+                <dt>git add -p</dt>
+                <dd>Asks which changes to stage</dd>
+              </dl>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2><i class="fa fa-file-text-o"></i> README.md</h2>
+              <pre><code data-trim contenteditable>
+# Packing List
+
+Packing list for trips.
+
+## Technology
+* laptop
+
+## Clothes
+* skirt with pockets
+
+## Toiletries
+* toothbrush
+              </code></pre>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>git add -p</h2>
+              <pre><code data-trim contenteditable>
+diff --git a/README.md b/README.md
+index da0a4b2..9e775a7 100644
+--- a/README.md
++++ b/README.md
+@@ -2,6 +2,11 @@
+
+ Packing list for trips.
+
++## Technology
+ * laptop
++
++## Clothes
+ * skirt with pockets
++
++## Toiletries
+ * toothbrush
+Stage this hunk [y,n,q,a,d,/,s,e,?]?
+              </code></pre>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Split</h2>
+              <pre><code data-trim contenteditable>
+Stage this hunk [y,n,q,a,d,/,s,e,?]? s
+Split into 3 hunks.
+@@ -2,4 +2,5 @@
+
+ Packing list for trips.
+
++## Technology
+ * laptop
+Stage this hunk [y,n,q,a,d,/,j,J,g,e,?]?
+              </code></pre>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="text-bg">
+              <h2>Commit message</h2>
+              <code>git commit</code>
+              <pre><code data-trim contenteditable>
+Short descriptive subject line.
+
+Longer description in the form of paragraphs
+that include reasons for the change, reference
+tickets or other commits.
+              </code></pre>
+              <p class="photo-credit">
+                Photo by <a href="https://flic.kr/p/J2gE4">christina robinson</a>, Flickr.com
+              </p>
+            </div>
+          </section>
+
         </section>
 
         <section data-background="images/backgrounds/no-2-pencils-by-melissa-hincha-ownby.jpg">
