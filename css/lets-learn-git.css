@@ -31,3 +31,14 @@ dt {
 .reveal blockquote {
   background: rgba(255, 255, 255, 0.25);
 }
+
+.about-me {
+  position: absolute;
+  top: -9em;
+  right: -3em;
+  text-align: right;
+}
+
+.about-me h1 {
+  margin-bottom: 0;
+}
