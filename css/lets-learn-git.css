@@ -5,6 +5,22 @@
   padding-bottom: 2em;
 }
 
+.reveal .text-bg-up {
+  margin-top: -9em;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 1em;
+  padding-bottom: 2em;
+}
+
+.reveal .text-bg-down {
+  margin-top: 9em;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 1em;
+  padding-bottom: 2em;
+}
+
 .reveal .photo-credit {
   position: absolute;
   font-size: x-small;
@@ -35,7 +51,7 @@ dt {
 .about-me {
   position: absolute;
   top: -9em;
-  right: -.5em;
+  right: 15em;
   text-align: right;
 }
 
