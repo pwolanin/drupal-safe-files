@@ -59,3 +59,10 @@ dt {
   margin-bottom: 0;
 }
 
+.about-me .photo-credit {
+  position: relative;
+  top: 12em;
+  right: 19em;
+  text-align: right;
+}
+
