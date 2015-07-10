@@ -191,8 +191,30 @@
           </div>
         </section>
 
+        <section>
+          <div class="text-bg">
+            <h1>Custom code version - alter hook</h1>
+               <pre><code>
+function mymodule_file_url_alter(&$uri) {
+  if (file_uri_scheme($uri) == 'public') {
+    $wrapper = file_stream_wrapper_get_instance_by_scheme($scheme);
+    $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
+    $uri = 'http://downloads.drupal-7.local:8083/' . $path;
+  }
+}
+              </code></pre>
+          </div>
+        </section>
 
-
+        <section>
+          <div class="text-bg">
+            <h1>Block direct access via .htaccess in files directory</h1>
+               <pre><code>
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule . - [F]
+              </code></pre>
+          </div>
+        </section>
       </div>
 
     </div>
