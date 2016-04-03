@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Drupal Safer Files - July 9, 2015</title>
+    <title>Drupal Safer Files - April 6, 2016</title>
 
     <meta name="description" content="Safe(r) User File Uploads">
     <meta name="author" content="Peter Wolanin">
@@ -44,7 +44,6 @@
           <span class="logo__image">
             <img src="images/logo.jpeg" alt="Central NJ Drupal meetup logo" height="55px" />
           </span>
-          <p class="logo__site-name">#drupal-nj</p>
         </div>
         <div class="session--info"  style="position: absolute; bottom: 0em; z-index: 20;">
           <p class="session__title">
@@ -61,7 +60,7 @@
       <div class="slides">
         <section>
           <h1>Making User File Uploads Safe(r)</h1>
-          <h2>July 9, 2015</h2>
+          <h2>April 6, 2016</h2>
         </section>
 
         <section data-background="images/backgrounds/16968083219_34589346e4_o.jpg">
@@ -126,9 +125,9 @@
 
         <section>
           <div class="text-bg">
-            <h1>Drupal 7 </h1>
+            <h1>Drupal 7</h1>
               <ul>
-                <li>nosniff core patch: https://www.drupal.org/node/2513366</li>
+                <li>nosniff in .htaccess since 7.40 (October): https://www.drupal.org/node/462950</li>
                 <li>Enable mod_mime for apache and configure it</li>
               </ul>
           </div>
@@ -138,7 +137,7 @@
           <div class="text-bg">
             <h2>Cross Domain Data Hijacking</h2>
               https://soroush.secproject.com/blog/2014/05/even-uploading-a-jpg-file-can-lead-to-cross-domain-data-hijacking-client-side-attack/
-              <p>Any allowed file upload like a .jpg can actaully be javascript content</p>
+              <p>Any allowed file upload like a .jpg can actaully be flash or PDF content</p>
               <p>Embedding the file with an OBJECT tag on another domain can enable CSRF and data hijacking</p>
           </div>
         </section>
@@ -174,6 +173,7 @@
         <section>
           <div class="text-bg">
             <h2>Don't use a bare domain. In Drupal 7, set $cookie_domain in settings.php for www.</h2>
+              <p>Drupal 7 core issue: https://www.drupal.org/node/2522002</p>
               <pre><code data-trim contenteditable>
 /**
  * Drupal automatically generates a unique session cookie name
