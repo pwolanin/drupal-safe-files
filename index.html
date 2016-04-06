@@ -79,7 +79,7 @@
           <div class="text-bg">
             <h1>You allow user uploads?</h1>
               <ul>
-                <li>XSS risks</li>
+                <li>Cross-site scripting (XSS) risks</li>
                 <li>cross-domain data hijacking (CSRF)</li>
                 <li>DoS with large files</li>
                 <li>DoS or other attacks via image effects</li>
@@ -90,7 +90,8 @@
         <section>
           <div class="text-bg">
             <h1>Browser security model - same origin</h1>
-              Scripts being served by a website can access the resources of that site as you by using session cookies.
+              <p>Scripts being served by a website can the access that site <em>as you by</em> using session cookies</p>
+              <p>This is why XSS is dangerous</p>
           </div>
         </section>
 
@@ -110,6 +111,20 @@
           A safe-looking file extension parsed as HTML + javascript
           </div>
         </section>
+        <section>
+          <div class="text-bg">
+            <h1>File content</h1>
+               <pre><code>
+&lt;html&gt;
+&lt;body&gt;
+&lt;script&gt;
+alert(document.cookie);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+              </code></pre>
+          </div>
+        </section>
 
         <section data-background="images/test-response-headers.png">
           <div class="text-bg-up">
@@ -125,7 +140,7 @@
 
         <section>
           <div class="text-bg">
-            <h1>Drupal 7 & 8</h1>
+            <h1>Drupal 7 and 8</h1>
               <ul>
                 <li>nosniff in .htaccess since 7.40 (October): https://www.drupal.org/node/462950</li>
                 <li>(Optional) enable/configure mod_mime for apache</li>
@@ -138,7 +153,7 @@
           <div class="text-bg">
             <h1>Cross Domain Data Hijacking</h1>
               <p class="small">https://soroush.secproject.com/blog/2014/05/even-uploading-a-jpg-file-can-lead-to-cross-domain-data-hijacking-client-side-attack/</p>
-              <p>A valid file upload like a .jpg can actaully be flash content</p>
+              <p>A valid file upload like a .jpg can actually be flash content</p>
               <p>Embedding with an OBJECT tag on another domain can enable CSRF and data hijacking</p>
           </div>
         </section>
@@ -228,6 +243,11 @@ RewriteRule . - [F]
           <h1>Protect against HTTP HOST Header attacks</h1>
           <p>It's important to configure your site to respond to only the expected domains</p>
           <p>See: https://www.drupal.org/node/1992030</p>
+          </div>
+        </section>
+        <section>
+          <div class="text-bg">
+          <h1>Thanks! Questions?</h1>
           </div>
         </section>
         </div>
