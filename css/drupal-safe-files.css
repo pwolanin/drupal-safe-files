@@ -44,6 +44,10 @@ dt {
   color: #00C5CD;
 }
 
+section .small {
+  font-size: medium;
+}
+
 .reveal blockquote {
   background: rgba(255, 255, 255, 0.25);
 }

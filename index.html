@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/midcamp-color.css" id="theme">
-    <link rel="stylesheet" href="css/lets-learn-git.css">
+    <link rel="stylesheet" href="css/drupal-safe-files.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!-- Code syntax highlighting -->
@@ -66,7 +66,7 @@
         <section data-background="images/backgrounds/16968083219_34589346e4_o.jpg">
           <div class="about-me">
           <h1>Peter Wolanin</h1>
-            <h6>Acquia & Drupal Security Team</h6>
+            <h6>Acquia Engineering & Drupal Security Teams</h6>
             <h1>pwolanin</h1>
             <p class="photo-credit">
               Photo by <a href="https://www.flickr.com/photos/amazeelabs/16968083219/in/set-72157651561042300">amazeelabs</a>, <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">by-nc-sa</a>
@@ -125,20 +125,21 @@
 
         <section>
           <div class="text-bg">
-            <h1>Drupal 7</h1>
+            <h1>Drupal 7 & 8</h1>
               <ul>
                 <li>nosniff in .htaccess since 7.40 (October): https://www.drupal.org/node/462950</li>
-                <li>Enable mod_mime for apache and configure it</li>
+                <li>(Optional) enable/configure mod_mime for apache</li>
+                <li>Or configure <code>$WEBSERVER</code> to send nosniff</li>
               </ul>
           </div>
         </section>
 
         <section>
           <div class="text-bg">
-            <h2>Cross Domain Data Hijacking</h2>
-              https://soroush.secproject.com/blog/2014/05/even-uploading-a-jpg-file-can-lead-to-cross-domain-data-hijacking-client-side-attack/
-              <p>Any allowed file upload like a .jpg can actaully be flash or PDF content</p>
-              <p>Embedding the file with an OBJECT tag on another domain can enable CSRF and data hijacking</p>
+            <h1>Cross Domain Data Hijacking</h1>
+              <p class="small">https://soroush.secproject.com/blog/2014/05/even-uploading-a-jpg-file-can-lead-to-cross-domain-data-hijacking-client-side-attack/</p>
+              <p>A valid file upload like a .jpg can actaully be flash content</p>
+              <p>Embedding with an OBJECT tag on another domain can enable CSRF and data hijacking</p>
           </div>
         </section>
 
@@ -158,7 +159,7 @@
 
         <section>
           <div class="text-bg">
-            <h2>Lighter fix - subdomain or alternate domain</h2>
+            <h1>Lighter fix - distinct files domain</h1>
               <p>By using a different domain or subdomain you can avoid sending session cookies</p>
               <p>For example, gmail attachments are served from https://mail-attachment.googleusercontent.com</p>
           </div>
@@ -172,7 +173,8 @@
 
         <section>
           <div class="text-bg">
-            <h2>Don't use a bare domain. In Drupal 7, set $cookie_domain in settings.php for www.</h2>
+            <h1>Avoid bare domain</h1
+              <p>Set $cookie_domain in settings.php for www. (Drupal 7)</p>
               <p>Drupal 7 core issue: https://www.drupal.org/node/2522002</p>
               <pre><code data-trim contenteditable>
 /**
@@ -186,10 +188,11 @@
 
         <section>
           <div class="text-bg">
-            <h2>Use CDN module or a little custom module</h2>
+            <h1>Safer files recipe</h1>
               <ul>
-                <li>Serve uploaded files from a subdomain or different domain</li>
-                <li>Use sites dir or redirect to prevent Drupal on the files domains</li>
+                <li>Serve uploaded files from a subdomain or different domain (make sure session cookie is not sent)</li>
+                <li>Do that via CDN module or a little custom module</i>
+                <li>Use sites directory, sites.php, or redirect to prevent Drupal on the files domains</li>
                 <li>Block public files on the Drupal domain</li>
               </ul>
           </div>
@@ -202,7 +205,8 @@
 function mymodule_file_url_alter(&$uri) {
   if (file_uri_scheme($uri) == 'public') {
     $wrapper = file_stream_wrapper_get_instance_by_scheme($scheme);
-    $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
+    $path = $wrapper->getDirectoryPath();
+    $path .= '/' . file_uri_target($uri);
     $uri = 'http://downloads.drupal-7.local:8083/' . $path;
   }
 }
@@ -221,7 +225,7 @@ RewriteRule . - [F]
         </section>
         <section>
           <div class="text-bg">
-          <h2>Protecting against HTTP HOST Header attacks</h2>
+          <h1>Protect against HTTP HOST Header attacks</h1>
           <p>It's important to configure your site to respond to only the expected domains</p>
           <p>See: https://www.drupal.org/node/1992030</p>
           </div>
