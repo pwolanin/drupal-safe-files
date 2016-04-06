@@ -77,7 +77,7 @@
 
         <section>
           <div class="text-bg">
-            <h1>You allow user uploads?</h1>
+            <h1>You allow users to upload files?</h1>
               <ul>
                 <li>Cross-site scripting (XSS) risks</li>
                 <li>cross-domain data hijacking (CSRF)</li>
@@ -90,7 +90,7 @@
         <section>
           <div class="text-bg">
             <h1>Browser security model - same origin</h1>
-              <p>Scripts being served by a website can the access that site <em>as you by</em> using session cookies</p>
+              <p>Scripts being served by a website can access that site <em>as you by</em> using session cookies</p>
               <p>This is why XSS is dangerous</p>
           </div>
         </section>
@@ -99,8 +99,8 @@
           <div class="text-bg">
             <h1>Common gotchas with browser security</h1>
               <ul>
-                <li>Cookies shared to subdomains or paths</li>
                 <li>Browser mime-type sniffing</li>
+                <li>Cookies shared to subdomains or paths</li>
                 <li>Cross-domain attacks</li>
               </ul>
           </div>
@@ -154,7 +154,7 @@ alert(document.cookie);
             <h1>Cross Domain Data Hijacking</h1>
               <p class="small">https://soroush.secproject.com/blog/2014/05/even-uploading-a-jpg-file-can-lead-to-cross-domain-data-hijacking-client-side-attack/</p>
               <p>A valid file upload like a .jpg can actually be flash content</p>
-              <p>Embedding with an OBJECT tag on another domain can enable CSRF and data hijacking</p>
+              <p>Embedding with an OBJECT tag another site can enable CSRF and data hijacking</p>
           </div>
         </section>
 
@@ -203,7 +203,7 @@ alert(document.cookie);
 
         <section>
           <div class="text-bg">
-            <h1>Safer files recipe</h1>
+            <h1>Safe(r) files recipe</h1>
               <ul>
                 <li>Serve uploaded files from a subdomain or different domain (make sure session cookie is not sent)</li>
                 <li>Do that via CDN module or a little custom module</i>
